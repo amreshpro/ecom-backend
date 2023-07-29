@@ -2,7 +2,9 @@ import express from 'express'
 import productAPI from './api/productAPI.js'
 import cors from 'cors'
 const app = express()
-
+import * as dotenv from 'dotenv'
+// Load Environment Variables
+dotenv.config();
 // load json
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
