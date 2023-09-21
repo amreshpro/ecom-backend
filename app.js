@@ -11,11 +11,14 @@ app.use(express.urlencoded({extended:true}))
 app.use(cors())
 
 app.get("/",(req,res)=>{
+    res.json({"status":"ok","message":"It works bro test-route-> /product"})
+})
+app.get("/product",(req,res)=>{
     res.send(productAPI)
 })
 
 
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5800
 
 app.listen(port,()=>{
     console.log(`server started at http://localhost:${port}`)
